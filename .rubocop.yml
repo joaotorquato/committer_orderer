@@ -1,0 +1,7 @@
+Documentation:
+  Enabled: false
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+AllCops:
+  Exclude:
+    - 'spec/spec_helper.rb'
