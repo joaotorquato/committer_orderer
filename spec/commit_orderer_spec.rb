@@ -35,10 +35,17 @@ RSpec.describe CommitOrderer do
   end
 
   describe '#call' do
-    it 'returns the commiters in order' do
-      order = CommitOrderer.call
+    it 'creates a file with the result of the ordering' do
+      CommitOrderer.call
 
-      expect(order).to eq(File.new('spec/support/result.txt').read)
+      result = File.new(path_from_last_file_of_tmp).read
+      expect(result).to eq(File.new('spec/support/result.txt').read)
+    end
+  end
+
+  def path_from_last_file_of_tmp
+    Dir.glob(File.join('tmp', '*.*')).max do |a, b|
+      File.ctime(a) <=> File.ctime(b)
     end
   end
 end

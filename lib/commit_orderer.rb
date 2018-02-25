@@ -7,7 +7,7 @@ class CommitOrderer
   end
 
   def self.call
-    new.order
+    new.export
   end
 
   def count_commits
@@ -21,10 +21,16 @@ class CommitOrderer
     result
   end
 
-  def order
-    count_commits.sort_by { |_k, v| v }.reverse.map do |email, counter|
-      txt_line(email, counter)
-    end.join("\n") + "\n"
+  def order_by_desc
+    count_commits.sort_by { |_k, v| v }.reverse
+  end
+
+  def export
+    f = File.new("tmp/committer_orderer_#{Time.new.to_s}.txt", 'w')
+    order_by_desc.map do |email, counter|
+      f << txt_line(email, counter)
+    end
+    f.close
   end
 
   private
@@ -69,6 +75,6 @@ class CommitOrderer
      data[email][:email],
      data[email][:login],
      data[email][:avatar_url],
-     counter].join(';')
+     counter].join(';') + "\n"
   end
 end
