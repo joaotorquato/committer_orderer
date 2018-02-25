@@ -26,7 +26,7 @@ class CommitOrderer
   end
 
   def export
-    f = File.new("tmp/committer_orderer_#{Time.new.to_s}.txt", 'w')
+    f = File.new("tmp/committer_orderer_#{Time.new}.txt", 'w')
     ordered_by_desc.map do |email, counter|
       f << txt_line(email, counter)
     end
@@ -39,7 +39,7 @@ class CommitOrderer
 
   def save_authors_data(commit)
     save_author(commit) if commit['author']
-    save_unknow_user(commit) unless commit['committer'] && commit['author']
+    save_unknow_user(commit) unless commit['author']
   end
 
   def save_author(commit)
