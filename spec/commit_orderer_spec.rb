@@ -1,13 +1,12 @@
 require 'spec_helper'
 
 RSpec.describe CommitOrderer do
-  describe '#commits' do
-    it 'returns the commits from the repo' do
-      orderer = CommitOrderer.commits
-
-      result = JSON.parse(File.new('spec/support/commits.json').read)
-      expect(orderer).to match(result)
-    end
+  before do
+    db = double
+    allow(CommitFetcher).to receive(:new).and_return(db)
+    allow(db).to receive(:fetch).and_return(
+      JSON.parse(File.new('spec/support/commits.json').read)
+    )
   end
 
   describe '#count_commits' do
@@ -23,6 +22,7 @@ RSpec.describe CommitOrderer do
         "j133y" => 5,
         "kassio" => 5,
         "lucasmazza" => 7,
+        "pmatiello" => 68,
         "rbrancher" => 2,
         "soteras" => 2,
         "stunts" => 4,

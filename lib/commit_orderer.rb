@@ -1,23 +1,18 @@
 require 'net/http'
 
 class CommitOrderer
-  COMMITS_URL = 'https://api.github.com/repos/Dinda-com-br/braspag-rest/commits'.freeze
-
   def initialize
     @data = {}
+    @commits = CommitFetcher.new.fetch
   end
 
   def self.call
     self.new.order
   end
 
-  def self.commits
-    JSON.parse(Net::HTTP.get(URI(COMMITS_URL)))
-  end
-
   def count_commits
     result = {}
-    CommitOrderer.commits.each do |commit|
+    commits.each do |commit|
       save_committer(commit) if commit['committer']
       save_author(commit) if commit['author']
       login = data.keys.last
@@ -39,8 +34,7 @@ class CommitOrderer
 
   private
 
-  attr_accessor :data
-
+  attr_accessor :data, :commits
 
   def save_committer(commit)
     data[commit['committer']['login']] = {
