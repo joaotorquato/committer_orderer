@@ -13,7 +13,7 @@ class CommitOrderer
   def count_commits
     result = {}
     commits.each do |commit|
-      save_data(commit)
+      save_authors_data(commit)
       email = commit['commit']['author']['email']
       result[email] = 1 unless result[email]
       result[email] += 1 if result[email]
@@ -21,13 +21,13 @@ class CommitOrderer
     result
   end
 
-  def order_by_desc
+  def ordered_by_desc
     count_commits.sort_by { |_k, v| v }.reverse
   end
 
   def export
     f = File.new("tmp/committer_orderer_#{Time.new.to_s}.txt", 'w')
-    order_by_desc.map do |email, counter|
+    ordered_by_desc.map do |email, counter|
       f << txt_line(email, counter)
     end
     f.close
@@ -37,19 +37,9 @@ class CommitOrderer
 
   attr_accessor :data, :commits
 
-  def save_data(commit)
-    save_committer(commit) if commit['committer']
+  def save_authors_data(commit)
     save_author(commit) if commit['author']
     save_unknow_user(commit) unless commit['committer'] && commit['author']
-  end
-
-  def save_committer(commit)
-    data[commit['commit']['committer']['email']] = {
-      name: commit['commit']['committer']['name'],
-      email: commit['commit']['committer']['email'],
-      login: commit['committer']['login'],
-      avatar_url: commit['committer']['avatar_url']
-    }
   end
 
   def save_author(commit)
