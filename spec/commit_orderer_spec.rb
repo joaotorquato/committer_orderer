@@ -13,20 +13,18 @@ RSpec.describe CommitOrderer do
     it 'counts the commits per person' do
       count = CommitOrderer.new.count_commits
 
-      expect(count).to match({
-        "andre-rodrigues" => 3,
-        "antoniofilho" => 2,
-        "bvicenzo" => 3,
-        "danielvidal" => 2,
-        "detierno" => 6,
-        "j133y" => 5,
-        "kassio" => 5,
-        "lucasmazza" => 7,
-        "pmatiello" => 68,
-        "rbrancher" => 2,
-        "soteras" => 2,
-        "stunts" => 4,
-      })
+      expect(count).to match('andre-rodrigues' => 3,
+                             'antoniofilho' => 2,
+                             'bvicenzo' => 3,
+                             'danielvidal' => 2,
+                             'detierno' => 6,
+                             'j133y' => 5,
+                             'kassio' => 5,
+                             'lucasmazza' => 7,
+                             'pmatiello' => 68,
+                             'rbrancher' => 2,
+                             'soteras' => 2,
+                             'stunts' => 4)
     end
   end
 

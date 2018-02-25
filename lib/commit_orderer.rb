@@ -7,7 +7,7 @@ class CommitOrderer
   end
 
   def self.call
-    self.new.order
+    new.order
   end
 
   def count_commits
@@ -23,12 +23,8 @@ class CommitOrderer
   end
 
   def order
-    count_commits.sort_by { |k,v| v }.reverse.map do |login, counter|
-      [data[login][:name],
-       data[login][:email],
-       data[login][:login],
-       data[login][:avatar_url],
-       counter].join(';')
+    count_commits.sort_by { |_k, v| v }.reverse.map do |login, counter|
+      txt_line(login, counter)
     end.join("\n") + "\n"
   end
 
@@ -52,5 +48,13 @@ class CommitOrderer
       login: commit['author']['login'],
       avatar_url: commit['committer']['avatar_url']
     }
+  end
+
+  def txt_line(login, counter)
+    [data[login][:name],
+     data[login][:email],
+     data[login][:login],
+     data[login][:avatar_url],
+     counter].join(';')
   end
 end

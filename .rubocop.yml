@@ -2,6 +2,10 @@ Documentation:
   Enabled: false
 Layout/MultilineOperationIndentation:
   EnforcedStyle: indented
+Metrics/BlockLength:
+  Max: 70
+  Exclude:
+    - 'spec/**/*'
 AllCops:
   Exclude:
     - 'spec/spec_helper.rb'
