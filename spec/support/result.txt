@@ -1,12 +1,18 @@
-Pedro Matiello;pedro@pmatiello.me;pmatiello;https://avatars0.githubusercontent.com/u/46062?v=4;68
-Lucas Mazza;lucas.mazza@plataformatec.com.br;lucasmazza;https://avatars0.githubusercontent.com/u/80978?v=4;7
-Denis Tierno;denisantoniazzi@icloud.com;detierno;https://avatars3.githubusercontent.com/u/12816947?v=4;6
-Jimmy;alexandre.sns@gmail.com;j133y;https://avatars3.githubusercontent.com/u/517772?v=4;5
-Kassio Borges;kassioborgesm@gmail.com;kassio;https://avatars1.githubusercontent.com/u/120483?v=4;5
-Daniel Mello Urbano;dnl_stunts@hotmail.com;stunts;https://avatars2.githubusercontent.com/u/454861?v=4;4
-Bruno Vicenzo;bnascimento@avenuecode.com;bvicenzo;https://avatars1.githubusercontent.com/u/173159?v=4;3
-André Rodrigues;a.andremr@gmail.com;andre-rodrigues;https://avatars3.githubusercontent.com/u/12816947?v=4;3
+Antonio Filho;antonio.filho@dinda.com.br;;;59
+Pedro Matiello;pedro@pmatiello.me;pmatiello;https://avatars0.githubusercontent.com/u/46062?v=4;11
+Antonio Carlos;antonio@compilandosolucao.com.br;antoniofilho;https://avatars1.githubusercontent.com/u/469113?v=4;9
+André Rodrigues;a.andremr@gmail.com;andre-rodrigues;https://avatars3.githubusercontent.com/u/12816947?v=4;5
+Jimmy;alexandre.sns@gmail.com;j133y;https://avatars3.githubusercontent.com/u/517772?v=4;3
+Kassio Borges;kassio.borges@plataformatec.com.br;;;3
+Daniel Coca;daniel.coca@youse.com.br;danielcoca;https://avatars3.githubusercontent.com/u/12816947?v=4;3
+Lucas Mazza;lucas.mazza@plataformatec.com.br;lucasmazza;https://avatars0.githubusercontent.com/u/80978?v=4;2
+Bruno Vicenzo;bnascimento@avenuecode.com;bvicenzo;https://avatars1.githubusercontent.com/u/173159?v=4;2
+Bruno Vicenzo;greenmetal@gmail.com;bvicenzo;https://avatars1.githubusercontent.com/u/173159?v=4;2
 rodrigo brancher;rbrancher@gmail.com;rbrancher;https://avatars2.githubusercontent.com/u/393354?v=4;2
-Antonio Carlos;antonio@compilandosolucao.com.br;antoniofilho;https://avatars1.githubusercontent.com/u/469113?v=4;2
+Kassio Borges;kassioborgesm@gmail.com;kassio;https://avatars1.githubusercontent.com/u/120483?v=4;2
+Marcio Toshio Ide;contato@marciotoshio.com.br;marciotoshio;https://avatars2.githubusercontent.com/u/454861?v=4;2
+Marcio Toshio Ide;marcio.ide@dinda.com.br;marciotoshio;https://avatars2.githubusercontent.com/u/454861?v=4;2
+Daniel Mello Urbano;dnl_stunts@hotmail.com;stunts;https://avatars2.githubusercontent.com/u/454861?v=4;2
 Daniel Vidal Salvi Marson;daniel.vidal@youse.com.br;danielvidal;https://avatars2.githubusercontent.com/u/454861?v=4;2
+Denis Tierno;denisantoniazzi@icloud.com;detierno;https://avatars3.githubusercontent.com/u/12816947?v=4;2
 Carlos Henrique;carlosoteras@gmail.com;soteras;https://avatars3.githubusercontent.com/u/12816947?v=4;2
